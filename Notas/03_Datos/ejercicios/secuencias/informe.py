@@ -19,8 +19,8 @@ def leer_camion(nombre_archivo):
                 print('Faltan datos en la línea', posicion, 'del archivo.')
     return camion
 
-camion = leer_camion('../../Data/camion.csv')
+camion = leer_camion('../../../Data/camion.csv')
 print(camion)
 
-fecha_camion = leer_camion('../../Data/fecha_camion.csv')
+fecha_camion = leer_camion('../../../Data/fecha_camion.csv')
 print(fecha_camion)

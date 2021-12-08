@@ -187,7 +187,7 @@ def leer_camion(nombre_archivo):
             camion.append(registro)
     return camion
 
-camion = leer_camion('../Data/camion.csv')
+camion = leer_camion('../../Data/camion.csv')
 pprint(camion)
 
 # Comentario: el problema era que estaba pisando todos los registros anteriores con el nuevo registro porque no cambiaba
@@ -213,5 +213,5 @@ def leer_camion(nombre_archivo):
             camion.append(registro.copy())
     return camion
 
-camion = leer_camion('../../Data/camion.csv')
+camion = leer_camion('../../../Data/camion.csv')
 pprint(camion)

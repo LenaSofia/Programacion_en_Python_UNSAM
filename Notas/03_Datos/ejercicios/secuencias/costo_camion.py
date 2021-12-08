@@ -16,9 +16,9 @@ import pprint
     archivo.close()
     return costo_total
 
-costo = costo_camion('../Data/missing.csv')'''
+costo = costo_camion('../../Data/missing.csv')'''
 
-'''f = open('../Data/camion.csv')
+'''f = open('../../Data/camion.csv')
 filas = csv.reader(f)
 encabezados = next(filas)
 fila = next(filas)
@@ -45,9 +45,9 @@ def costo_camion(nombre_archivo):
     print(f'El número de cajones es de {ncajones} y el precio por cajon es de {precio}')
     return costo_total
 
-#costo = costo_camion('../../Data/missing.csv')
+#costo = costo_camion('../../../Data/missing.csv')
 #print(costo)
 
 
-#fecha = costo_camion('../../Data/fecha_camion.csv')
+#fecha = costo_camion('../../../Data/fecha_camion.csv')
 #print(fecha)
