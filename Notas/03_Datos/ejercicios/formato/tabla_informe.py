@@ -50,11 +50,11 @@ def hacer_informe(lista_cajones, diccionario_precios):
 
     informe = []
 
-    encabezado = ' Nombre     Cajones     Precio     Cambio  '
-    informe = encabezado
+    encabezado = ("Nombre", "Cajones", "Precio", "Cambio")
+    informe.append(encabezado)
 
-    lineas = '---------- ---------- ---------- ----------'
-    informe += lineas
+    lineas = tuple('---------- ---------- ---------- ----------')
+    informe.append(lineas)
 
     '''for elemento in lista_cajones:
         fila = f'{elemento[0]:<10s} {elemento[1]:>10d} {elemento[2]:>10.2f} ' \
