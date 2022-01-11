@@ -1,4 +1,4 @@
-# Ejercicio informe.py N°2.15
+# Ejercicio 3.13: Recolectar datos
 
 import csv
 
@@ -50,18 +50,19 @@ def hacer_informe(lista_cajones, diccionario_precios):
 
     informe = []
 
-    encabezado = ("Nombre", "Cajones", "Precio", "Cambio")
-    informe.append(encabezado)
+    encabezado = (" Nombre     Cajones     Precio     Cambio  ")
+    print(encabezado)
 
-    lineas = tuple('---------- ---------- ---------- ----------')
-    informe.append(lineas)
+    lineas = ("---------- ---------- ---------- ----------")
+    print(lineas)
 
-    '''for elemento in lista_cajones:
-        fila = f'{elemento[0]:<10s} {elemento[1]:>10d} {elemento[2]:>10.2f} ' \
-               f'{(float(precios_camion[elemento[0]]) - elemento[1]):>10.2f}'
-        informe += fila'''
+    for tupla in lista_cajones:
+        tupla = list(tupla)
+        tupla.append(float(precios_camion[tupla[0]]) - tupla[2])
+        tupla = tuple(tupla)
+        informe.append(tupla)
 
+        print(f' {tupla[0]:<10s} {tupla[1]:>7d}    {tupla[2]:>8.2f}   {tupla[3]:>8.2f}  ')
     return informe
 
 informe = hacer_informe(camion, precios_camion)
-print(informe)
