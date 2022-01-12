@@ -78,7 +78,6 @@ def agregar_encabezados(headers):
     """Agrega los encabezados y la separación con los datos del informe"""
 
     encabezados = ''
-    #separacion = ''
 
     for nombre in headers:
         encabezados += f'{nombre: >10s} '
