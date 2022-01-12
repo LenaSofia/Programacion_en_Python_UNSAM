@@ -50,19 +50,12 @@ def hacer_informe(lista_cajones, diccionario_precios):
 
     informe = []
 
-    encabezado = (" Nombre     Cajones     Precio     Cambio  ")
-    print(encabezado)
-
-    lineas = ("---------- ---------- ---------- ----------")
-    print(lineas)
-
     for tupla in lista_cajones:
         tupla = list(tupla)
         tupla.append(float(precios_camion[tupla[0]]) - tupla[2])
         tupla = tuple(tupla)
         informe.append(tupla)
 
-        print(f' {tupla[0]:<10s} {tupla[1]:>7d}    {tupla[2]:>8.2f}   {tupla[3]:>8.2f}  ')
     return informe
 
 
@@ -74,3 +67,41 @@ informe = hacer_informe(camion, precios_camion)
 
 for nombre, cajones, precio, cambio in informe:
         print(f'{nombre:>10s} {cajones:>10d} {precio:>10.2f} {cambio:>10.2f}')
+
+#%%
+
+#Ejercicio 3.15: Agregar encabezados
+
+headers = ('Nombre', 'Cajones', 'Precio', 'Cambio')
+
+def agregar_encabezados(headers):
+    """Agrega los encabezados y la separación con los datos del informe"""
+
+    encabezados = ''
+    #separacion = ''
+
+    for nombre in headers:
+        encabezados += f'{nombre: >10s} '
+
+    separacion = f'{"-"*10:<10s} '*4
+
+    encabezados += ('\n' + separacion)
+
+    return encabezados
+
+encabezados = agregar_encabezados(headers)
+
+def completar_informe(encabezados, informe):
+    """Recibe el encabezado y el informe de compra y venta de frutas y verduras e imprime una tabla con eso"""
+
+    informe_completo = encabezados
+
+    for tupla in informe:
+        precio = f'${tupla[2]:.2f}'
+        informe_completo += '\n'
+        informe_completo += f'{tupla[0]:<10s} {tupla[1]:>10d} {precio:>10s} {tupla[3]:>10.2f}'
+
+    return informe_completo
+
+informe_completo = completar_informe(encabezados, informe)
+print(informe_completo)
