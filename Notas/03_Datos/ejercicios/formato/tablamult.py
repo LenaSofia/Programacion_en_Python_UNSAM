@@ -10,10 +10,10 @@ encabezado += f'\n{"-"*len(encabezado)}'
 for numero in numeros:
     numero_puntos = f'{numero}:'
     tablas += f' {numero_puntos:<4s} {"0":^3s} {numero:^3d} '
+    nuevo_numero = numero
 
-    for numero_interno in numeros:
-        nuevo_numero = numero_interno
-        nuevo_numero += numero_interno
+    for i in range(0,8):
+        nuevo_numero += numero
         tablas += f'{nuevo_numero:^3d} '
 
     tablas += '\n'
