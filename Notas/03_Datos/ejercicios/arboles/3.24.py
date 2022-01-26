@@ -38,11 +38,7 @@ CENTENARIO = leer_parque('../../../Data/arbolado-en-espacios-verdes.csv', 'CENTE
 que, dada una lista de árboles devuelva la especie que en promedio tiene la mayor inclinación y el promedio calculado..
 
 Resultados. Deberías obtener, por ejemplo, que los Álamos Plateados del Parque Los Andes tiene un promedio de
-inclinación de 25 grados.
-
-Preguntas extras: ¿Qué habría que cambiar para obtener la especie con un ejemplar más inclinado de toda la ciudad y
-no solo de un parque? ¿Podrías dar la latitud y longitud de ese ejemplar? ¿Y dónde se encuentra (lat,lon) el ejemplar
-más alto? ¿De qué especie es? """
+inclinación de 25 grados."""
 
 def especies(lista_arboles):
 
